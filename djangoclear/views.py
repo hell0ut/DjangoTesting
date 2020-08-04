@@ -7,4 +7,4 @@ class TemplateView(generic.TemplateView):
         context={
             'time':datetime.datetime.now()
         }
-        return render(request,'home/main.html',context)
+        return render(request,'home/index.html',context)
