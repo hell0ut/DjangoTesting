@@ -23,6 +23,6 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home/main.html') ),
+    path('', TemplateView.as_view(template_name='home/index.html') ),
     path('autos/',include('autos.urls'),name='autos')
 ]
