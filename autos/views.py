@@ -13,7 +13,7 @@ class MainView(LoginRequiredMixin,View):
     def get(self,request):
         mc = Make.objects.all().count()
         al = Auto.objects.all()
-        ctx = {'make-count': mc, 'auto_list': al}
+        ctx = {'make_count': mc, 'auto_list': al}
         return render(request, 'autos/auto_list.html',ctx)
 
 
@@ -26,19 +26,19 @@ class MakeView(LoginRequiredMixin,View) :
 
 class MakeCreate(LoginRequiredMixin, CreateView):
     model = Make
-    success_url = reverse_lazy('autos:all')
+    success_url = reverse_lazy('autos:make_list')
     fields = '__all__'
 
 
 class MakeUpdate(LoginRequiredMixin, UpdateView):
     model = Make
-    success_url = reverse_lazy('autos:all')
+    success_url = reverse_lazy('autos:make_list')
     fields = '__all__'
 
 
 class MakeDelete(LoginRequiredMixin, DeleteView):
     model = Make
-    success_url = reverse_lazy('autos:all')
+    success_url = reverse_lazy('autos:make_list')
     fields = '__all__'
 
 

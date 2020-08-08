@@ -24,7 +24,7 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('accounts/',include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(),name='home'),
-    path('autos/',include('autos.urls'),name='autos')
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', TemplateView.as_view(), name='home'),
+    path('autos/',include('autos.urls'), name='autos')
 ]
