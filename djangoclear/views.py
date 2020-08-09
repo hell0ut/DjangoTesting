@@ -4,7 +4,4 @@ import datetime
 
 class TemplateView(generic.TemplateView):
     def get(self,request):
-        context={
-            'time':datetime.datetime.now()
-        }
-        return render(request,'home/index.html',context)
+        return render(request,'home/main.html')

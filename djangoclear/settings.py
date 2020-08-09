@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ads.apps.AdsConfig',
     'autos.apps.AutosConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
@@ -39,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3' # Add
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

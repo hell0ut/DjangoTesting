@@ -25,6 +25,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(), name='home'),
-    path('autos/',include('autos.urls'), name='autos')
+    path('', TemplateView.as_view(template_name='base_bootstrap.html'), name='home'),
+    path('autos/',include('autos.urls'), name='autos'),
+    path('ads/',include('ads.urls'),name='ads'),
 ]
